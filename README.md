@@ -1,2 +1,2 @@
 # sf_data_science
-SF DS-2.0 course homework
+SF Data Sciense 2.0 course homework
