@@ -8,7 +8,8 @@ import numpy as np
 
 def random_predict_with_correction(number:int=1) -> int:
     """Угадываем случайное число с коррекцией
-
+    После поптки отгадать число, корректируем максимум и минимум 
+    в зависимости от того было ли число больше или меньше загаданного
     Args:
         number (int, optional): Загаданное число. Defaults to 1.
 
@@ -23,9 +24,9 @@ def random_predict_with_correction(number:int=1) -> int:
         count += 1
         predict_number = np.random.randint(min, max)
         if number == predict_number:
-            break # выход из цикла когда угадали число
+            break # Выход из цикла когда угадали число
         
-        elif number < predict_number: # предполагаемое число
+        elif number < predict_number: # Предполагаемое число
             max = predict_number
         
         elif number > predict_number:
@@ -47,9 +48,9 @@ def random_predict(number:int=1) -> int:
     
     while True:
         count += 1
-        predict_number = np.random.randint(1, 501) # предполагаемое число
+        predict_number = np.random.randint(1, 501) # Предполагаемое число
         if number == predict_number:
-            break # выход из цикла когда угадали число
+            break # Выход из цикла когда угадали число
     return count
 
 
